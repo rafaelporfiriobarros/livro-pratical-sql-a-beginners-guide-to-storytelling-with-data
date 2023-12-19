@@ -1,4 +1,4 @@
-## Esudos do livro:
+## Estudos do livro de SQL:
 ### Practical Sql, 2nd Edition: A Beginner's Guide to Storytelling with Data
 
 ![alt text](https://m.media-amazon.com/images/I/81q0NwjKSdL._SY385_.jpg)
