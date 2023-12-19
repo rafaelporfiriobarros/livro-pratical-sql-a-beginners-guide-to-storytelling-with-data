@@ -88,6 +88,54 @@ WHERE first_name = 'Janet';
 SELECT school FROM teachers 
 WHERE school <> 'F.D. Roosevelt HS';
 
+-- selecione as colunas first_name, last_name e hire_date
+-- onde hire_date seja menor do que '2000-01-01'
+
+SELECT first_name, last_name, hire_date
+FROM teachers
+WHERE hire_date < '2000-01-01';
+
+-- selecione as colunas first_name, last_name e salary
+-- onde salary seja >= '43500'
+
+SELECT first_name, last_name, salary
+FROM teachers
+WHERE salary >= '43500';
+
+-- selecione as colunas first_name, last_name, school e salary
+-- onde salary esteja entre 40000 e 65000
+
+SELECT first_name, last_name, school, salary
+FROM teachers
+WHERE salary BETWEEN 40000 AND 65000;
+
+-- outra versao
+
+SELECT first_name, last_name, school, salary
+FROM teachers
+WHERE salary >= 40000 AND salary <= 65000;
+
+-- selecione a coluna first_name onde first_name tenha um valor 'sam%' usando like;
+
+SELECT first_name
+FROM teachers
+WHERE first_name LIKE 'sam%';
+
+-- selecione a coluna first_name onde first_name tenha um valor 'sam%' usando ilike;
+
+SELECT first_name
+FROM teachers
+WHERE first_name ILIKE 'sam%';
+
+-- selecione todas as colunas da tabela teachers onde school tenha o valor 'Myers Middle School'
+-- e salary < 40000
+
+SELECT * FROM teachers 
+WHERE school = 'Myers Middle School' AND salary < 40000;
+
+
+
+
 
 
 
