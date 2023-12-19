@@ -133,11 +133,35 @@ WHERE first_name ILIKE 'sam%';
 SELECT * FROM teachers 
 WHERE school = 'Myers Middle School' AND salary < 40000;
 
+-- selecione todas as colunas da tabela teachers onde a coluna last_name
+-- tenha o valor 'Cole' ou tenha o valor 'Bush'
 
+SELECT * FROM teachers
+WHERE last_name = 'Cole' OR last_name = 'Bush';
 
+-- selecione todas as colunas da tabela teachers
+-- onde a coluna school tenha o valor 'F.D Roosevelt HS'
+-- e salary < 38000 ou salary > 40000
 
+SELECT * FROM teachers
+WHERE school = 'F.D. Roosevelt HS' AND (salary < 38000 OR salary > 40000);
 
+-- Observe como os resultados mudam se omitirmos os parênteses. Isso é
+-- porque o operador AND tem precedência sobre OR e é
+-- avaliado primeiro:
 
+SELECT * FROM teachers
+WHERE school = 'F.D. Roosevelt HS'
+AND salary < 38000 OR salary > 40000;
+
+-- selecione as colunas first_name, last_name, school, hire_date e salary
+-- onde school tenha like '%Roos%'
+-- e ordene usando DESC pela coluna hire_date
+
+SELECT first_name, last_name, school, hire_date, salary
+FROM teachers
+WHERE school LIKE '%Roos%'
+ORDER BY hire_date DESC;
 
 
 
